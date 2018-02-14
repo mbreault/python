@@ -1,7 +1,18 @@
 ## Dijkstra's https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 ## Written based on pseudo code in wiki page
+## 2/14/2018  Know it can be improved.  WIP
 
 import sys
+
+def get_path(steps,start,end,path = []):
+    if start == end:
+        path.append(start)
+        path.reverse()
+        return path
+    else:
+         path.append(end)
+         path = get_path(steps,start,steps[end],path)
+         return path
 
 def dijkstra(graph,start,end,dist,prev,unvisited):
 
@@ -10,7 +21,6 @@ def dijkstra(graph,start,end,dist,prev,unvisited):
         neighbors = graph[vertex]    
         
         for neighbor, distance in neighbors.items():
-            print(vertex,neighbor)
             alt = dist[vertex] + distance
             if alt < dist[neighbor]:
                 dist[neighbor] = alt
@@ -40,4 +50,7 @@ for vertex in graph:
 
 dist[start] = 0
 
-print(dijkstra(graph,start,end,dist,prev,unvisited))
+distances, steps =  dijkstra(graph,start,end,dist,prev,unvisited)
+
+print("The shortest distance from {0} to {1} is {2} following the path {3}".format(start,end,distances[end],get_path(steps,start,end)))
+
