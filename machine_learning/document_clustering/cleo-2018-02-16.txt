@@ -1,0 +1,8 @@
+machine learning on text blob 
+audit around bookings.
+"reflect the truth" projects - customers should see the truth at all times.
+"assume the best intentions."
+
+FSM = state machine
+
+sabre = gds = global distrubtion system
