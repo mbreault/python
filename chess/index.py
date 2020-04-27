@@ -1,3 +1,5 @@
+## based on https://medium.com/@andreasstckl/writing-a-chess-program-in-one-day-30daff4610ec
+
 import chess
 import random
 
