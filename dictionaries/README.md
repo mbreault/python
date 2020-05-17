@@ -1,0 +1,1 @@
+You cannot rename a key in a dictionary but you can pop it off and create a new key with same value and the new key name.
