@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 ## based on https://medium.com/@andreasstckl/writing-a-chess-program-in-one-day-30daff4610ec
 
